@@ -1,20 +1,78 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Multifungsi</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #333; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; }
+        nav ul li a { text-decoration: none; color: white; padding: 15px; display: inline-block; }
+        nav ul li a:hover { background-color: #ddd; color: black; }
+        .content { margin: 15px; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+    </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- Halaman Home -->
-<section id="home">
-    <h1>Welcome to My Website</h1>
-    <!-- Konten halaman depan di sini -->
-</section>
+    <div id="home" class="content">
+        <h1>Selamat Datang di Website Saya</h1>
+        <p>Ini adalah halaman pembuka website saya. Temukan berbagai informasi tentang saya.</p>
+    </div>
 
-<!-- Halaman Gallery -->
-<section id="gallery">
-    <h2>Gallery</h2>
-    <!-- Kumpulan foto-foto di sini -->
-</section>
+    <div id="gallery" class="content">
+        <h2>Gallery</h2>
+        <p>Koleksi foto-foto pilihan saya.</p>
+        <!-- Tempat untuk menambahkan foto-foto -->
+    </div>
 
-<!-- Halaman Blog -->
-<section id="blog">
-    <h2>Blog</h2>
+    <div id="blog" class="content">
+        <h2>Blog</h2>
+        <article>
+            <h3>Judul Artikel 1</h3>
+            <p>Konten artikel tentang teknologi.</p>
+        </article>
+        <article>
+            <h3>Judul Artikel 2</h3>
+            <p>Konten artikel tentang seni.</p>
+        </article>
+        <article>
+            <h3>Judul Artikel 3</h3>
+            <p>Konten artikel tentang olahraga.</p>
+        </article>
+    </div>
+
+    <div id="contact" class="content">
+        <h2>Kontak Pribadi</h2>
+        <p>Untuk pertanyaan lebih lanjut, silakan hubungi saya melalui formulir di bawah ini.</p>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+            <input type="email" id="email" name="email" placeholder="Email Anda" required>
+            <textarea id="message" name="message" placeholder="Pesan Anda" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2024 Website Pribadi.</p>
+    </footer>
+
+    <script>
+        // Contoh JavaScript untuk interaksi dinamis
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Terima kasih telah menghubungi saya!');
+        });
+    </script>
+</body>
+</html>
